@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Testa se foi passado um argumento
+
+msg="Digite um argumento valido" 
+[[ $# -ne 1  ]] &&  echo $msg && exit 1
+
+# EXECUTAR "help" para verificar se vai conseguir
+# mostrar a ajuda do comando ( sucesso ) ou não ( erro )
+
+help $1 &> /dev/null 
+
+# &> manda qualquer saida para /dev/null 
+# > direciona para /dev/null
+
+#Usar comando "test" para avaliar a expressão..
+
+[[ $? -eq 0 ]] && echo "É builtin" || echo "Não é builtin"
+
