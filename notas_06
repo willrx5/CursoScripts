@@ -1,0 +1,14 @@
+ PASSOS QUE ESTAMOS UTILIZANDO PARA CRIAR SCRIPTS: 
+#1 > novo_script:
+#2 chmod u+x novo_script
+#3 vim novo_script
+#= Dentro do arquivo novo_script = !/usr/bin/env bash
+
+1º Opção 
+echo '#!/usr/bin/env bash' > teste 
+
+2º Opção 
+novo_script NOVO 
+
+passando o $NOVO como argumento
+
