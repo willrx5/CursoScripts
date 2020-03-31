@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+#OPÇÕES
+
+#VARIAVEIS 
+
+dia=$(date +'%d/%m/%Y')
+
+
+header="#!/usr/bin/env bash 
+#-------------------------------------------
+# Script   :                                   
+# Descrição:
+# Versão   : 
+# Autor    :  
+# Data     : $dia
+# Licença  : GNU/GPL v3.0
+#-------------------------------------------
+# Uso:
+#-------------------------------------------
+"
+
+#1 TESTAR O NUMERO ARGUMENTOS 
+[[ $# -ne 1 ]] && echo "Digite apenas um nome de arquivo" && exit 1
+#compara o numero de argumentos com 1. Não igual, escreve na tela "Digite...." && encerra o script com exit retornando 1
+
+#2 TESTAR O NOME DO ARQUIVO 
+[[ -f $1 ]] && echo "Arquivo Já Existe !! " && exit 1
+#compara o nome do arquivo (-f, chave do comando test )
+
+#3  
+
+
+
+echo "$header" > $1 #Primeiro Argumento 
+
+chmod u+x $1
+vim $1
+
+exit 0
+
